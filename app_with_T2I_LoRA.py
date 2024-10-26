@@ -54,6 +54,8 @@ validation_pipeline = load_model(model_path=args.model_path, \
     beta_text = args.beta_text, \
     beta_vae = args.beta_vae, \
     beta_unet = args.beta_unet, \
+    text_device = "cuda:0", \
+    unet_device = "cuda:0", \
     **config)
 
 def init_state(

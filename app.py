@@ -27,7 +27,8 @@ parser.add_argument("--pretrain_model_path", type=str, default="../")
 parser.add_argument("--sub_folder", type=str, default="unet")
 args = parser.parse_args()
 
-sam2_checkpoint = "./checkpoints/sam2_hiera_large.pt"
+#sam2_checkpoint = "./checkpoints/sam2_hiera_large.pt"
+sam2_checkpoint = "./sam2-hiera-large/sam2_hiera_large.pt"
 model_cfg = "sam2_hiera_l.yaml"
 
 predictor = build_sam2_video_predictor(model_cfg, sam2_checkpoint)
@@ -36,6 +37,8 @@ config = OmegaConf.load(args.config)
 validation_pipeline = load_model(model_path=args.model_path, \
     sub_folder=args.sub_folder, \
     pretrained_model_path=args.pretrain_model_path, \
+    text_device = "cuda:0", \
+    unet_device = "cuda:0", \
     **config)
 
 def init_state(
