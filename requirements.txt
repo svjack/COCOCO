@@ -19,3 +19,4 @@ wandb
 httpx[socks]
 opencv-python
 scipy
+huggingface_hub==0.25.0
