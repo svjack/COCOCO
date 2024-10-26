@@ -8,7 +8,8 @@ decord==0.6.0
 gdown
 omegaconf
 gradio==3.40
-xformers==0.0.28.dev864
+#xformers==0.0.28.dev864
+xformers
 imageio-ffmpeg==0.4.9
 decord==0.6.0
 omegaconf==2.3.0
