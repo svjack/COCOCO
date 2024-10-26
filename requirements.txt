@@ -18,3 +18,4 @@ einops
 wandb
 httpx[socks]
 opencv-python
+scipy
