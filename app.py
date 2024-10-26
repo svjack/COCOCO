@@ -526,5 +526,5 @@ with gr.Blocks() as iface:
         outputs = [inference_state, template_frame, click_state, run_status],
     )
 #iface.queue()#concurrency_count=1)
-iface.launch(server_port=8000, server_name="0.0.0.0")
+iface.launch(server_port=8000, server_name="0.0.0.0", share = True)
 # iface.launch(debug=True, enable_queue=True)
